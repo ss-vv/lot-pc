@@ -1,0 +1,544 @@
+// 彩票样式
+.lottery-wrap{
+  min-width: 1100px;
+  .lottery-head{height: 107px;background: rgba(255,255,255,0.5);border-top: 1px solid #f8e7df;overflow: hidden;
+    .lef-par{width: 610px;height: 77px;background: #fff;margin-top: 15px;float: left;border-radius: (77px/2);position: relative;padding-left: 96px;
+      .lotto-img{width: 78px;height: 78px;position: absolute;left: 0;top: 0;}
+      .hea-nam-are{width: 154px;float: left;font-size: 14px;color: #666;
+        .hea-name{font-size: 20px;color: #333;margin-top: 2px;}
+      }
+      .count-down-are{float: left;padding-top: 9px;
+        &>div{float: left;}
+        .time-num{width: 60px;height: 60px;background: #666;color: #fff;border-radius: 50%;text-align: center;line-height: 60px;font-size: 36px;}
+        .dot{position: relative;width: 22px;height: 60px;
+          &:before,&:after{content: '';position: absolute;width: 8px;height: 8px;background: #666;border-radius: 50%;left: 50%;margin-left: -4px;}
+          &:before{top: 23px;}
+          &:after{top: 34px;}
+        }
+      }
+      .ext-link{float: left;    width: 120px;  padding-left: 24px;padding-top:12px;
+        a{display: block;color: #656362;text-decoration: none;
+          &+a{margin-top: 12px}
+        }
+        i{color: #656362;margin-right: 10px;}
+        .icon-zst{background: url("/src/assets/cssImages/lottery/icon-zst.png");width: 15px;height: 15px;display: inline-block;}
+      }
+    }
+    .rig-par{width: 487px;float: left;padding-left: 18px;
+      .kj-tit{font-size: 16px;color: #333;margin-top: 11px;}
+      .draw-a-lotto{// 开奖结果样式
+        font-size: 0;margin-top: 7px;padding-top: 5px;
+        span{display: inline-block;vertical-align: top;
+          //官方玩法普通球
+          &.ball-normal{font-size: 31px;color: #fff;background: url("/src/assets/cssImages/lottery/kaijiangjieguo/icon-ball-normal.png");width: 46px;height: 46px;text-align: center;padding-right: 2px;margin-right: 6px;}
+          // 官方玩法小球
+          &.ball-txt{font-size: 20px;color: #999;width: 34px;height: 34px;background: #fff;border-radius: 50%;text-align: center;line-height: 32px;border: 1px solid #dbc7bb;margin-right: 5px;margin-top: 5px;}
+          // 传统玩法pk10
+          &.ball-pk10{
+            font-size: 24px;color: #fff;font-weight: bold;width: 27px;height: 27px;text-align: center;line-height: 27px;border-radius: 3px;margin-right: 6px;
+            &.pk10-1{background: #f6d51b;}
+            &.pk10-2{background: #2c93fc;}
+            &.pk10-3{background: #535353;}
+            &.pk10-4{background: #f77514;}
+            &.pk10-5{background: #4edef4;}
+            &.pk10-6{background: #4e1fe7;}
+            &.pk10-7{background: #cfcfcf;}
+            &.pk10-8{background: #e7241f;}
+            &.pk10-9{background: #7d0000;}
+            &.pk10-10{background: #30c263;letter-spacing: -3px; text-align: left;}
+          }
+        }
+        // 小球包裹
+        .ball-txt-wrap{display: inline-block;margin-left: 9px;}
+        // pk10传统玩法包裹
+        .ball-pk10-tradition{margin-top: -5px;}
+        .ball-pl10-ball-txt-wrap{width: 324px;text-align: center;margin-top: 6px;
+          span{font-size: 16px;color: #666;margin-right: 14px;}
+        }
+      }
+      &.dra-kl8{// 快乐8
+        padding-left: 0;
+        .kj-tit{float: left;width: 120px;font-size: 14px;text-align: center;    margin-top: 34px;
+          span{display: block;}
+        }
+        .draw-a-lotto{float: left;width: 366px;margin-top: 15px;
+          span.ball-normal-kl8{font-size:18px;color: #fff;background: url("/src/assets/cssImages/lottery/kaijiangjieguo/icon-ball-normal-kl8.png");width: 33px;height: 34px;text-align: center;padding-right: 1px;margin-right: 3px;margin-bottom: 1px;}
+        }
+      }
+      &.dra-lhc{// 六合彩
+        .draw-a-lotto{padding-top:0;
+          &>.ball-lhc{font-weight: bold;}
+          span.ball-lhc{width: 33px;height: 33px;font-size: 16px;color: #666;text-align: center;line-height: 23px;padding: 2px 6px 8px 3px;margin-right: 10px;
+            &.lhc-n1,&.lhc-n2,&.lhc-n12,&.lhc-n13,&.lhc-n7,&.lhc-n8,&.lhc-n18,&.lhc-n19,&.lhc-n23,&.lhc-n24,&.lhc-n29,&.lhc-n30,&.lhc-n34,&.lhc-n35,&.lhc-n40,&.lhc-n45,&.lhc-n46{background: url("/src/assets/cssImages/lottery/lhc/icon-red-num.png");}
+            &.lhc-n3,&.lhc-n4,&.lhc-n9,&.lhc-n10,&.lhc-n14,&.lhc-n15,&.lhc-n20,&.lhc-n25,&.lhc-n26,&.lhc-n31,&.lhc-n36,&.lhc-n37,&.lhc-n41,&.lhc-n42,&.lhc-n47,&.lhc-n48{background: url("/src/assets/cssImages/lottery/lhc/icon-blue-num.png");}
+            &.lhc-n5,&.lhc-n6,&.lhc-n11,&.lhc-n16,&.lhc-n17,&.lhc-n21,&.lhc-n22,&.lhc-n27,&.lhc-n28,&.lhc-n32,&.lhc-n33,&.lhc-n38,&.lhc-n39,&.lhc-n43,&.lhc-n44,&.lhc-n49{background: url("/src/assets/cssImages/lottery/lhc/icon-green-num.png");}
+            &.lhc-plus{font-size: 30px;    padding: 2px 0 8px;width: auto;}
+            &.lhc-blank{  padding: 2px 0 8px;width: 22px;}
+          }
+        }
+      }
+      &.dra-pl3{// 排列3
+        span.ball-normal{margin-right: 22px;}
+      }
+      &.dra-xy28{// 幸运28
+        span.ball-plus{font-size: 38px;color: #666;line-height: 1;margin-left: -6px;}
+        span{
+          &.ball-xy28{width: 46px;height: 46px;margin-right: 5px; font-size: 31px; color: #fff;text-align: center;padding-right: 2px;
+            &.xy28-n0,&.xy28-n13,&.xy28-n14{background: url("/src/assets/cssImages/lottery/xy28/icon-gray-ball.png")}
+            &.xy28-n1,&.xy28-n4,&.xy28-n7,&.xy28-n10,&.xy28-n16,&.xy28-n19,&.xy28-n22,&.xy28-n25{background: url("/src/assets/cssImages/lottery/xy28/icon-green-ball.png")}
+            &.xy28-n2,&.xy28-n5,&.xy28-n8,&.xy28-n11,&.xy28-n17,&.xy28-n20,&.xy28-n23,&.xy28-n26{background: url("/src/assets/cssImages/lottery/xy28/icon-blue-ball.png")}
+            &.xy28-n3,&.xy28-n6,&.xy28-n9,&.xy28-n12,&.xy28-n18,&.xy28-n21,&.xy28-n24,&.xy28-n27{background: url("/src/assets/cssImages/lottery/xy28/icon-red-ball.png")}
+          }
+        }
+      }
+      &.dra-k3{// 快3
+        .draw-a-lotto{margin-top: 1px;padding: 0;}
+          span{
+            &.ball-dice{width: 59px;height: 61px;margin-right: 15px;
+              &.dice-1{background: url("/src/assets/cssImages/lottery/k3/touzi-1.png")}
+              &.dice-2{background: url("/src/assets/cssImages/lottery/k3/touzi-2.png")}
+              &.dice-3{background: url("/src/assets/cssImages/lottery/k3/touzi-3.png")}
+              &.dice-4{background: url("/src/assets/cssImages/lottery/k3/touzi-4.png")}
+              &.dice-5{background: url("/src/assets/cssImages/lottery/k3/touzi-5.png")}
+              &.dice-6{background: url("/src/assets/cssImages/lottery/k3/touzi-6.png")}
+            }
+          }
+      }
+    }
+  }
+  .container{width: 1100px;margin: 0 auto;}
+  .lotto-bet-area{
+    background: #fff;border: 1px solid #d8d3d0;border-radius: 10px;margin-top: 14px;
+    .bet-top{height: 58px;border-bottom: 1px solid #e6e6e6;padding: 10px;
+      .bet-switch{display: inline-block;width: 140px;height: 38px;border: 1px solid #e6e6e6;border-radius: 19px;padding: 3px;position: relative;
+        &:before{content: '';position: absolute;border: 1px solid #e6e6e6;top:3px;right: 3px;bottom: 3px;left: 3px;border-radius: 16px;background: linear-gradient(to bottom,rgba(0,0,0,0.12),#fff)}
+        a{position: relative;z-index: 2;display: inline-block;width: 62px;text-decoration: none;text-align: center;line-height: 28px;font-size: 16px;color: #666;font-weight: bold;border-radius: 16px;
+          &.cur{color: #fff;background: linear-gradient(to bottom,#fc901c,#f64c01);border: 1px solid #e87839;}
+        }
+      }
+      .primary-link{display: inline-block;padding: 0 10px;
+        li{display: inline-block;font-size: 16px;color: #666;padding: 8px 5px;border-radius: 20px;cursor: pointer;
+          &:hover{color: #fa6200;}
+          &.cur{background: linear-gradient(to left bottom,#f64c01,#fc901c);color: #fff;}
+        }
+      }
+    }
+    .bet-area{// 投注区域样式
+      overflow: hidden;position: relative;min-height: 400px;
+      &:after{content: '';position: absolute;background: #d8d3d0;width: 1px;height: 100%;left: 790px;}
+      .bet-lef{width: 790px;float: left;
+        &.official{ // 官方玩法投注区域
+          .secondary-link-wrap{padding: 10px;background: #f2f2f2;
+            ul{width: 100%;font-size: 14px;color: #666;
+              li{line-height: 28px;}
+              .sec-tit{width: 83px;display: inline-block;padding: 0 10px;font-weight: bold;
+                &.long-txt{width:93px;} // 文字较长时的样式
+                &+.sec-link{margin-left: 0;}
+              }
+              .sec-link{width: 73px;display: inline-block;margin-left: 10px;text-align: center;cursor: pointer;
+                &.long-txt{width: 90px;} // 文字较长时的样式
+                &:first-child{margin-left: 0;}
+                &:hover{color: #fa6200;}
+                &.cur{background: #fff;border: 1px solid #fa6200;color: #fa6200;border-radius: 15px;}
+              }
+            }
+          }
+          .bet-cont-hea{
+            height: 50px;line-height: 30px;padding: 10px;overflow: hidden;font-size: 14px;color: #666;
+            .wf-tip{    padding: 0;border: 0;}
+            .btn-lryl{border: 1px solid #e2e2e2;height: 30px;line-height: 28px;padding: 0 10px;display: inline-block;text-decoration: none;border-radius: 15px;position: relative;
+              &.active{border-color: #fa6200;color: #fa6200;
+                &:before{
+                  content: '';width: 8px;height: 5px;border-left: 1px solid #fa6200;border-bottom: 1px solid #fa6200;display: inline-block;    transform: rotate(-49deg);               vertical-align: top;                margin-top: 10px;                margin-right: 5px;
+                }
+              }
+            }
+          }
+          .bet-cont-con{// 玩法投注区域
+            //五星直选单式样式
+            .wxzxds{padding-left: 10px;
+              textarea{
+                width: 769px;height: 226px;border: 1px solid #ddd;background: #f2f2f2;resize: none;margin-bottom: 6px;outline: none;padding: 10px;font-family: inherit;
+              }
+              .btn-del,.btn-clear{display: inline-block;height: 30px;line-height: 28px;padding: 0 10px;border: 1px solid #fa6200;color: #fa6200;text-align: center;border-radius: 4px;font-size: 14px;text-decoration: none;margin: 0 2px;}
+            }
+            li{font-size: 0;    overflow: hidden;}
+            .exact-b{width: 66px;text-align:center;display: inline-block;font-size: 16px;color: #666;height: 87px;line-height: 87px;vertical-align: top;margin-right: 14px;
+              &.long-txt{width: 120px;}  // 文字较长时的样式
+            }
+            .bet-item{display: inline-block;vertical-align: top;padding-top: 24px;margin-right: 10px;
+              .bet-ball{width: 38px;height: 40px;background: url("/src/assets/cssImages/lottery/icon-betball-normal.png");display: block;font-size: 25px;color: #666;text-align: center;padding-bottom: 3px;line-height: 37px;cursor: pointer;
+                &.bet-ball-long{font-size: 12px;} // 文字较长时
+                &:hover{background: url("/src/assets/cssImages/lottery/icon-betball-hover.png");color: #fa6200;}
+                &.active{background: url("/src/assets/cssImages/lottery/icon-betball-active.png");color: #fff;}
+              }
+              .lryl{display: block;text-align: center;font-size: 12px;color: #adadad;}
+            }
+            .bet-filter{  // 投注筛选区
+              float: right;    padding-right: 24px;
+              span{font-size: 16px;color: #666;display: inline-block;margin-left: 8px;width: 24px;height: 24px;text-align: center;line-height: 24px;vertical-align: top;margin-top: 32px;cursor: pointer;
+                &.active{background: #e6e6e6;border-radius: 50%;}
+              }
+            }
+            .bet-options-are{// 底部投注选项区
+              padding: 40px 15px 20px;font-size: 14px;color: #666;position: relative;
+              .bet-money{
+                span{width: 24px;height: 24px;display: inline-block;background: #e6e6e6;border-radius: 4px;text-align: center;line-height: 24px;margin: 0 2px;cursor: pointer;
+                  &.active{background: #fa6200;color: #fff;}
+                }
+              }
+              .betTimesInputW{// 投注倍数输入框
+                width: 98px;line-height: 22px;
+                .el-input{
+                  input{padding-left: 23px;padding-right: 23px;height: 24px;border: 1px solid #cfcfcf;background: #f2f2f2;}
+                }
+                .el-input-number__decrease, .el-input-number__increase{
+                  width: 23px;background: #fff;
+                }
+              }
+              .line1,.line2,.line3{padding-bottom: 10px;}
+              .mouey-span{display: inline-block;width: 62px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;    vertical-align: top;  line-height: 26px;}
+              .betBomusSlider{display:inline-block;vertical-align: top;width: 200px;margin-right: 10px;
+                .el-slider__runway{    margin: 8px 0; background-color: #f2f2f2;}
+                .el-slider__button{border: 2px solid #e5e5e5;}
+                .el-slider__bar{background: linear-gradient(to right,#fc901c,#f64c01)}
+              }
+              .btnBet{width: 108px;height: 40px;line-height: 40px;text-align: center;font-size: 16px;color: #fff;background: linear-gradient(to right,#fc901c,#f64c01);position: absolute;right:20px;bottom: 20px;border-radius: 20px;text-decoration: none;box-shadow: 0 4px 4px rgba(247,83,4,0.2);}
+            }
+          }
+        }
+        &.tradition{// 传统玩法投注区
+          .secondary-link-wrap{padding: 10px;background: #f2f2f2;
+            ul{width: 100%;font-size: 14px;color: #666;
+              li{line-height: 28px;}
+              .sec-tit{width: 83px;display: inline-block;padding: 0 10px;font-weight: bold;
+                &.long-txt{width:93px;} // 文字较长时的样式
+                &+.sec-link{margin-left: 0;}
+              }
+              .sec-link{width: 73px;display: inline-block;text-align: center;cursor: pointer;
+                &.long-txt{width: 90px;} // 文字较长时的样式
+                &:first-child{margin-left: 0;}
+                &:hover{color: #fa6200;}
+                &.cur{background: #fff;border: 1px solid #fa6200;color: #fa6200;border-radius: 15px;}
+                &.txt6{width: 103px;}
+              }
+            }
+          }
+          .bet-cont{
+            .top-bar{padding: 10px;color: #666;line-height: 30px;
+              .btn{height: 30px;line-height: 28px;border: 1px solid #e2e2e2;display: inline-block;vertical-align: middle;padding: 0 5px;border-radius: 15px;text-decoration: none;font-size: 14px;color: #999;
+                &.active{
+                  border-color: #fa6200;color: #fa6200;
+                  &:before{
+                    content: '';display:inline-block;width: 8px;height: 6px;color: #fa6200;border-left: 1px solid #fa6200;border-bottom: 1px solid #fa6200;transform: rotate(-48deg);
+                    margin: 9px 5px 0 0;
+                    vertical-align: top;
+                  }
+                }
+              }
+              .mone-input{display: inline-block;vertical-align: middle;
+                input{width: 120px;height: 30px;border: 1px solid #fa6200;line-height: 28px;padding: 0 10px;color: #fa6200;font-size: 14px;border: 1px solid #fa6200;outline: 0;border-radius: 4px;
+                }
+              }
+              .jgzs{color: #9c9c9c;cursor: pointer;
+                .icon-layer{display: inline-block;vertical-align: middle;background: url("/src/assets/cssImages/lottery/icon-layer.png");width: 10px;height: 10px;}
+              }
+            }
+            .bet-cont-c{border: 1px solid #fff;    border-radius: 8px;
+              .bet-t{width: 100%;font-size: 14px;color: #666;
+                th{line-height: 34px;background: #e9e9e9;}
+                td{line-height: 44px;padding: 0 5px;
+                  &.active{background: #fef7ee;
+                    .bet-ball{background: #fa6200;color: #fff;
+                      &.txt{color: #fa6200;background: transparent;}
+                    }
+                  }
+                }
+                // 投注球样式
+                .bet-ball{display: inline-block;cursor:pointer;width: 32px;height: 32px;font-size:16px;color:#666;border-radius: 50%;text-align: center;background: url("/src/assets/cssImages/lottery/tradition/icon-bet-ball.png");line-height: 32px;
+                  &.txt{background: transparent !important;}
+                  &.bet-ball-pk10{width: 27px;height: 27px;font-size: 16px;font-weight: bold;border-radius: 4px;line-height: 27px;color: #fff;
+                    &.bet-ball-pk10-01{background: #f6d51b;}
+                    &.bet-ball-pk10-02{background: #2c93fc;}
+                    &.bet-ball-pk10-03{background: #535353;}
+                    &.bet-ball-pk10-04{background: #f77514;}
+                    &.bet-ball-pk10-05{background: #4edef4;}
+                    &.bet-ball-pk10-06{background: #4e1fe7;}
+                    &.bet-ball-pk10-07{background: #cfcfcf;}
+                    &.bet-ball-pk10-08{background: #e7241f;}
+                    &.bet-ball-pk10-09{background: #7d0000;}
+                    &.bet-ball-pk10-10{background: #30c263;}
+                  }
+                  &.bet-ball-k3{width: 32px;height: 32px;border-radius: 0;font-size: 0;line-height: 44px;
+                    &.bet-ball-k3-1{background: url(/src/assets/cssImages/lottery/k3/touzi-1.png) 0 0 /100%;}
+                    &.bet-ball-k3-2{background: url(/src/assets/cssImages/lottery/k3/touzi-2.png) 0 0 /100%;}
+                    &.bet-ball-k3-3{background: url(/src/assets/cssImages/lottery/k3/touzi-3.png) 0 0 /100%;}
+                    &.bet-ball-k3-4{background: url(/src/assets/cssImages/lottery/k3/touzi-4.png) 0 0 /100%;}
+                    &.bet-ball-k3-5{background: url(/src/assets/cssImages/lottery/k3/touzi-5.png) 0 0 /100%;}
+                    &.bet-ball-k3-6{background: url(/src/assets/cssImages/lottery/k3/touzi-6.png) 0 0 /100%;}
+                  }
+                  &.bet-ball-lhc{font-size: 16px;color: #666 !important;font-weight: bold;    text-align: center;                    line-height: 23px;                    padding: 2px 6px 8px 3px;
+                    &.lhc-n1,&.lhc-n2,&.lhc-n12,&.lhc-n13,&.lhc-n7,&.lhc-n8,&.lhc-n18,&.lhc-n19,&.lhc-n23,&.lhc-n24,&.lhc-n29,&.lhc-n30,&.lhc-n34,&.lhc-n35,&.lhc-n40,&.lhc-n45,&.lhc-n46{background: url("/src/assets/cssImages/lottery/lhc/icon-red-num.png");}
+                    &.lhc-n3,&.lhc-n4,&.lhc-n9,&.lhc-n10,&.lhc-n14,&.lhc-n15,&.lhc-n20,&.lhc-n25,&.lhc-n26,&.lhc-n31,&.lhc-n36,&.lhc-n37,&.lhc-n41,&.lhc-n42,&.lhc-n47,&.lhc-n48{background: url("/src/assets/cssImages/lottery/lhc/icon-blue-num.png");}
+                    &.lhc-n5,&.lhc-n6,&.lhc-n11,&.lhc-n16,&.lhc-n17,&.lhc-n21,&.lhc-n22,&.lhc-n27,&.lhc-n28,&.lhc-n32,&.lhc-n33,&.lhc-n38,&.lhc-n39,&.lhc-n43,&.lhc-n44,&.lhc-n49{background: url("/src/assets/cssImages/lottery/lhc/icon-green-num.png");}
+                  }
+                }
+                .bet-input{display: inline-block;vertical-align: middle;
+                  input{width: 45px;height: 28px;border: 1px solid #9b9b9b;border-radius: 4px;outline: 0;line-height: 26px;padding: 0 10px;box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);}
+                  .select-input{
+                    input{      width: 60px;
+                      font-size: 12px;
+                      padding: 0;
+                      text-align: center;}
+                    .el-input__suffix{right: 0;width: 10px;
+                      i{width: 14px;margin-left: -8px;}
+                    }
+                  }
+                }
+              }
+              .bet-btn-wrap{padding: 22px 0;text-align: center;
+                .btn-bet,.btn-reset{width: 108px;height: 40px;border: 1px solid transparent;text-align: center;line-height: 40px;border-radius: 20px;font-size: 16px;display: inline-block;vertical-align: middle;text-decoration: none;margin: 0 5px;}
+                .btn-bet{color: #fff;background: linear-gradient(to left bottom, #f64c01, #fc901c);box-shadow: 0 5px 5px rgba(247, 83, 4, 0.2);}
+                .btn-reset{color: #fa6200;border-color: #cfcfcf;background: #fff;}
+              }
+            }
+          }
+        }
+      }// bet-lef结束
+      .bet-right{    width: 306px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        .his-tit{height: 45px;line-height: 45px;text-align: center;color: #666;font-size: 16px;border-bottom: 1px solid #e6e6e6;}
+        .table-hea{
+          table{width: 100%;border-collapse: collapse;line-height: 40px;background: #f9f9f9;border-bottom: 1px dashed #ccc;text-align: center;
+            th{font-size: 14px;color: #656463;}
+          }
+        }
+        .table-area{
+          position: absolute;
+          top:86px;
+          left:0;right: 0;
+          bottom:40px;overflow: hidden;
+          table{width: 100%;border-collapse: collapse;line-height: 40px;text-align: center;
+            tr{border-bottom: 1px dashed #ccc;
+              &:hover{background: #fef7ee;}
+              &.first{ // 表格第一行的特殊样式
+                .ball{background: #fa6200;color: #fff;}
+                .ball-pk10{    color: #fff;
+                  &.pk10-01 {background: #f6d51b; }
+                  &.pk10-02 { background: #2c93fc; }
+                  &.pk10-03 {background: #535353; }
+                  &.pk10-04 { background: #f77514; }
+                  &.pk10-05 {background: #4edef4; }
+                  &.pk10-06 { background: #4e1fe7; }
+                  &.pk10-07 { background: #cfcfcf; }
+                  &.pk10-08 { background: #e7241f; }
+                  &.pk10-09 { background: #7d0000; }
+                  &.pk10-10 {background: #30c263; }
+                }
+                .ball-k3{ font-size: 0;
+                  &.k3-1{background: url(/src/assets/cssImages/lottery/k3/touzi-1.png) center /100%;}
+                  &.k3-2{background: url(/src/assets/cssImages/lottery/k3/touzi-2.png) center /100%;}
+                  &.k3-3{background: url(/src/assets/cssImages/lottery/k3/touzi-3.png) center /100%;}
+                  &.k3-4{background: url(/src/assets/cssImages/lottery/k3/touzi-4.png) center /100%;}
+                  &.k3-5{background: url(/src/assets/cssImages/lottery/k3/touzi-5.png) center /100%;}
+                  &.k3-6{background: url(/src/assets/cssImages/lottery/k3/touzi-6.png) center /100%;}
+                }
+              }
+              .ball{display: inline-block;vertical-align: middle ;width: 18px;height: 18px;text-align: center;line-height: 18px;border-radius: 50%;margin-right: 1px;} // 普通球
+              .ball-pk10{  display: inline-block; vertical-align: middle;  padding: 1px; line-height: 1;          margin-right: 1px;} // PK10
+              .ball-k3{width: 30px;height: 30px;    display: inline-block;vertical-align: middle;          line-height: 30px;font-size: inherit;} // k3
+              .txt{font-size: 12px;}
+               td{width: 50%;color: #656463;font-size: 14px;}
+            }
+          }
+          &.ssc{
+            td{
+              &:first-child{width: 35%}
+              &:first-child+td{width: 65%;}
+            }
+          }
+          &.pk10{
+            td{
+              &:first-child{width: 30%}
+              &:first-child+td{width: 70%;}
+            }
+          }
+        }
+        .link-zoushi{position: absolute;font-size: 14px;color: #666;bottom: 0; left: 0;right: 0;height: 40px;line-height: 40px;text-align: center;text-decoration: none;}
+        &.tradition{// bet-right tradition
+          .ph-tabs{
+            .el-tabs__nav{float: none;
+              .el-tabs__item{width: 50%; height: 45px;
+                line-height: 45px;
+                text-align: center;
+                color: #666;
+                font-size: 16px;
+                border-bottom: 1px solid #e6e6e6;
+                &.is-active{color: #fa6200; }
+              }
+              .el-tabs__active-bar{background-color: #fa6200;}
+            }
+            .el-tabs__header{margin-bottom: 0;}
+            .ph-head{line-height: 40px;
+              background: #f9f9f9;font-weight: bold;color: #666;
+              text-align: center;
+                .ph-head-select{font-size: 14px;color: #fa6200;display: inline-block;vertical-align: top;
+                  .el-select>.el-input{display: inline-block;}
+                  .el-input__inner{    border: 0;
+                    color: inherit;
+                    font-weight: bold;
+                    padding: 0;
+                    background: transparent;
+                    width: 80px;
+                    margin-left: 10px;}
+                }
+            }
+            .ph-tabs-table{    width: 100%;
+              border-collapse: collapse;
+              line-height: 40px;
+              text-align: center;
+              border-top: 1px dashed #ccc;
+              tr{    border-bottom: 1px dashed #ccc;font-weight: normal;background: #fff;
+                &:hover{background: #fef7ee;}
+              }
+            }
+            .el-tabs__content{height: 320px;}
+            .ph-tabs-table-wra{position: absolute;left: 0;right: 0;bottom: 0;top:40px;}
+          }
+          .hcl-filter{// 六合彩右侧区域的筛选功能部分
+            padding: 15px;
+              table{width: 100%}
+              .el-checkbox{
+                  &.myCheckbox{
+                    .el-checkbox__inner {color: #666;
+                      border: 1px solid #666;
+                      border-radius: 50%;
+                      width: 16px;
+                      height: 16px;
+                    }
+                    .el-checkbox__inner::after {
+                      left: 5px;
+                      top: 2px;
+                    }
+                    .el-checkbox__label{color: #666;}
+                    .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+                      background-color: #fa6200;
+                      border: 1px solid #fa6200;
+                    }
+                  }
+              }
+          }
+        }
+      }// bet-right结束
+    }
+  }
+  .lotto-bet-ball-table{// 传统玩法大小单双龙虎区
+    background: #fff;border: 1px solid #d8d3d0;border-radius: 10px;margin-top: 14px;margin-bottom: 20px;padding: 12px;
+    .bet-ball-table-select{
+      .el-select{    width: 84px;height: 30px;
+        .el-input__inner{padding-right: 20px; height: 30px;}
+      }
+    }
+    .bet-ball-table{position: relative;
+      .bet-ball-dxlh{position: absolute;top:-40px;left: 94px;
+        span{display: inline-block;width: 56px;height: 30px;line-height:30px;text-align: center;font-size: 14px;font-weight: bold;color: #666;border-radius: 4px;cursor: pointer;
+          &.cur{color: #fff;background: linear-gradient(to right,#fc901c,#f64c01);}
+        }
+      }
+      table{width: 100%;border-collapse: collapse;
+        &.table-1{margin-top: 10px;border: 1px solid #e6e6e6;line-height: 26px;font-size: 16px;color: #666;
+          th{width: 9.1%;border: 1px solid #e6e6e6;background: #f2f2f2;font-weight: normal;
+            &:first-child{font-weight: bold;font-size: 14px;}
+          }
+          td{width: 9.1%;text-align: center;border: 1px solid #e6e6e6;
+            &:first-child{font-weight: bold;font-size: 14px;}
+          }
+        }
+        &.table-2{margin-top: 5px;border: 1px solid #e6e6e6;line-height: 26px;font-size: 14px;color: #666;
+          td{text-align: center;border-right: 1px solid #e6e6e6;}
+        }
+      }
+    }
+  }
+  .lotto-bet-record-area{// 投注记录区
+    background: #fff;border: 1px solid #d8d3d0;border-radius: 10px;margin-top: 14px;margin-bottom: 20px;
+    .lotto-bet-record-tabs{
+      .el-tabs__nav-scroll{height: 58px;padding: 0 10px;}
+      .el-tabs__item{height: 58px;line-height: 58px;font-size: 16px;color: #999;
+        &:hover,&.is-active{color: #fa6200;}
+      }
+      .el-tabs__nav-wrap::after{height: 1px;background-color: #e6e6e6;}
+      .el-tabs__active-bar{background-color: #fa6200;}
+      .el-tabs__content{padding: 10px;}
+      .el-tabs__header{margin: 0;}
+      table{width: 100%;border-collapse: collapse;height: 48px;line-height: 48px;font-size: 14px;color: #666;border: 1px solid #e6e6e6;
+        th{background:#f2f2f2;}
+        td{border-bottom: 1px dashed #ccc;text-align: center;}
+      }
+    }
+    .pagination-wrap{
+      text-align: center;padding: 15px 0 0;
+      .el-pagination{display: inline-block;
+        .el-pager{
+          li{border-radius: 50%;    border: 1px solid transparent; background-color: #e6e6e6;
+            &.active{background-color: #fa6200;color: #fff !important;}
+            &:hover{    color: #fa6200;}
+          }
+        }
+        .btn-next,.btn-prev{background-color: #fff;border: 1px solid #d2d2d2;border-radius: 50%;}
+      }
+    }
+  }
+  &.l-tradition{ // 传统玩法样式
+  }
+}
+.traZst{ // 走势弹窗样式
+
+  .traHea{height: 46px;line-height: 46px;padding: 0 10px;border-bottom: 1px solid #999;color: #666;font-size: 16px;
+    .el-icon-close{cursor: pointer;}
+  }
+  .tz-tab-hea{
+    table{width: 100%;border-bottom: 1px solid #e6e6e6;border-collapse: collapse;line-height: 34px;font-size: 14px;color: #666;
+      th{background-color: #f2f2f2;}
+      td{text-align: center;border-bottom: 1px solid #e6e6e6;}
+    }
+    .btn{display: inline-block;vertical-align: middle;background: #fff;border: 1px solid #999;border-radius: 4px;height: 26px;line-height: 24px;padding: 0 5px;cursor: pointer;
+      &.cur{    background: #fa6200;        color: #fff;        border: 1px solid #fa6200;}
+    }
+    .ball{background: #fa6200;display: inline-block;width: 24px;height: 24px;text-align: center;line-height: 24px;vertical-align: middle;border-radius: 50%;color: #fff;font-size: 18px;
+      &.big,&.single,&.dragon{background: #de1a1a;font-size: 14px;}
+      &.small,&.double,&.tiger{background: #1a92e0;font-size: 14px;}
+      &.ball-k3{ font-size: 0;
+        &.ball-k3-1{background: url(/src/assets/cssImages/lottery/k3/touzi-1.png) center /100%;}
+        &.ball-k3-2{background: url(/src/assets/cssImages/lottery/k3/touzi-2.png) center /100%;}
+        &.ball-k3-3{background: url(/src/assets/cssImages/lottery/k3/touzi-3.png) center /100%;}
+        &.ball-k3-4{background: url(/src/assets/cssImages/lottery/k3/touzi-4.png) center /100%;}
+        &.ball-k3-5{background: url(/src/assets/cssImages/lottery/k3/touzi-5.png) center /100%;}
+        &.ball-k3-6{background: url(/src/assets/cssImages/lottery/k3/touzi-6.png) center /100%;}
+      }
+      &.ball-pk10{border-radius: 4px;
+        &.ball-pk10-01 {background: #f6d51b; }
+        &.ball-pk10-02 { background: #2c93fc; }
+        &.ball-pk10-03 {background: #535353; }
+        &.ball-pk10-04 { background: #f77514; }
+        &.ball-pk10-05 {background: #4edef4; }
+        &.ball-pk10-06 { background: #4e1fe7; }
+        &.ball-pk10-07 { background: #cfcfcf; }
+        &.ball-pk10-08 { background: #e7241f; }
+        &.ball-pk10-09 { background: #7d0000; }
+        &.ball-pk10-10 {background: #30c263; }
+      }
+      &.ball-lhc{padding: (2px/1.375) (6px/1.375) (8px/1.375) (3px/1.375) ;    font-size: 13px;        color: #666;        line-height: 18px;
+        &.lhc-n1,&.lhc-n2,&.lhc-n12,&.lhc-n13,&.lhc-n7,&.lhc-n8,&.lhc-n18,&.lhc-n19,&.lhc-n23,&.lhc-n24,&.lhc-n29,&.lhc-n30,&.lhc-n34,&.lhc-n35,&.lhc-n40,&.lhc-n45,&.lhc-n46{background: url("/src/assets/cssImages/lottery/lhc/icon-red-num.png") 0 0 /100%;}
+        &.lhc-n3,&.lhc-n4,&.lhc-n9,&.lhc-n10,&.lhc-n14,&.lhc-n15,&.lhc-n20,&.lhc-n25,&.lhc-n26,&.lhc-n31,&.lhc-n36,&.lhc-n37,&.lhc-n41,&.lhc-n42,&.lhc-n47,&.lhc-n48{background: url("/src/assets/cssImages/lottery/lhc/icon-blue-num.png") 0 0 /100%;}
+        &.lhc-n5,&.lhc-n6,&.lhc-n11,&.lhc-n16,&.lhc-n17,&.lhc-n21,&.lhc-n22,&.lhc-n27,&.lhc-n28,&.lhc-n32,&.lhc-n33,&.lhc-n38,&.lhc-n39,&.lhc-n43,&.lhc-n44,&.lhc-n49{background: url("/src/assets/cssImages/lottery/lhc/icon-green-num.png") 0 0 /100%;}
+      }
+    }
+  }
+  &.vl-notify.vl-notify-main{border-radius: 10px;background: #fff;    box-shadow: 0 0 20px rgba(0,0,0,0.75);}
+  &.vl-notify.vl-notify-alert h2.vl-notice-title{border-top-left-radius: 10px;border-top-right-radius: 10px;height: 45px;line-height: 45px;background-color: #fff;font-size: 16px;color: #666;text-align: center;font-weight: normal;border-bottom: 1px solid #999;}
+  &.vl-notify .vl-notify-content{padding: 0;}
+}

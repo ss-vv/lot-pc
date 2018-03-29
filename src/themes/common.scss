@@ -1,0 +1,192 @@
+// base样式
+*{box-sizing: border-box;margin: 0;padding: 0;}
+body{line-height: 1.5; font-family: '微软雅黑',Helvetica, sans-serif;font-size: 14px;color: #333;background: #e2e2e2;}
+ul{list-style: none;}
+a{color: inherit;}
+input{outline: 0;font-family: inherit;}
+
+html,body,#app{height: 100%;overflow: hidden;}
+
+// 全局的一些样式
+.color-orange{color: #fa6200;}
+.color-red{color: #f00;}
+.color-green{color: #0f0;}
+.color-blue{color: #5b9cde;}
+.float-left{float: left;}
+.float-right{float: right;}
+.inline-block{display: inline-block;vertical-align: top;}
+.padding-h-5{padding: 0 5px;}
+.padding-h-20{padding: 0 20px !important;}
+.clear{
+    &:before{content:'';display: table;}
+    &:after{content: '';display: block;clear: both;}
+}
+.lottery-main{
+    height: 100%;
+    .header{height: 68px;background:linear-gradient(to right,#f64c01,#fc901c) ;position: absolute;top: 0;left: 0;right: 0;
+        &:before{content: '';position: absolute;left: 0;top: 0;width:450px;height: 68px;background: url('/src/assets/cssImages/lottery/header-bg-l.png') no-repeat center;}
+        &:after{content: '';position: absolute;right: 0;top: 0;width:610px;height: 68px;background: url('/src/assets/cssImages/lottery/header-bg-r.png') no-repeat center;}
+        .cont{position: absolute;z-index:1002;left: 0;top: 0;right: 0;bottom: 0;
+            .logo{height: 68px;line-height: 68px;left: 20px;position: absolute;width: 216px;}
+            .navbar{
+                position: absolute;left: 236px;top: 0;bottom: 0;transition: all 0.3s;
+                li{float: left;height: 68px;width: 102px;line-height: 68px;
+                    &.cur{background: url('/src/assets/cssImages/lottery/nav-active-bg.png') no-repeat center top;}
+                    a{color: #fff;text-decoration: none;display: block;text-align: center;}
+                }
+            }
+            .user-info{position: absolute;right: 0;top: 0;bottom: 0;
+                .badge{position: absolute;width: 20px;height: 20px;border: 2px solid #fff;border-radius: 50%;background: #ff4b15;font-size: 12px;color: #fff;line-height: 16px;text-align: center;    top: -9px;    right: -9px;white-space: nowrap;    overflow: hidden;    text-overflow: ellipsis;}
+                .icon-sound{background: url('/src/assets/cssImages/icon-sound.png');display: inline-block;width: 21px;height: 21px;    vertical-align: 0;    margin-top: 24px;margin-right: 20px;}
+                .icon-envelope{background: url('/src/assets/cssImages/icon-envelope.png');display: inline-block;width: 24px;height: 21px; position: relative;   vertical-align: 0;    margin-top: 24px;margin-right: 20px;}
+                .icon-bell{background: url('/src/assets/cssImages/icon-bell.png');display: inline-block;width: 22px;height: 23px; position: relative;   vertical-align: 0;    margin-top: 24px;margin-right: 20px;}
+                .icon-withdraw,.icon-recharge{width: 36px;height: 36px;font-size: 20px;display: inline-block;border: 2px solid #fff;border-radius: 50%;text-align: center;line-height: 32px;vertical-align: top;margin-top: 16px;color: #fff;text-decoration: none;margin-right: 10px;}
+                .icon-portrait{font-size: 14px;color: #fff;text-decoration: none;
+                    .txt-w{    display: inline-block;    margin-left: 10px;max-width: 140px;overflow: hidden;margin-right: 10px;    vertical-align: top;    margin-top: 14px;
+                        &>div{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+                    }
+                }
+                .portrait{width: 56px;height: 56px;border-radius: 50%;    vertical-align: top;    margin-top: 6px;}
+                .btn-logout{ width: 80px;
+                    display: inline-block;position: relative;
+                    text-align: center;
+                    height: 68px;
+                    vertical-align: top;
+                    line-height: 68px;
+                    [class^='cir']{position: absolute;width: 45px;height: 45px;border-radius: 50%;background: rgba(247,76,0,0.25);   display: none;                   
+                        &.cir1{    top: 10px;  left: 50%;   margin-left: -22.5px;}
+                        &.cir2{left: 14px;top: 16px;}
+                        &.cir3{right: 14px;top: 16px;}
+                    }
+                    .icon-switch{background: url('/src/assets/cssImages/icon-switch.png') no-repeat;display: inline-block;width: 20px;height: 22px;vertical-align: middle;position: relative;z-index: 2;}
+                    &:hover{
+                        [class^='cir']{ animation: blink 0.4s linear infinite alternate;   display: block;                  
+                            &.cir1{animation-delay: 0s;}
+                            &.cir2{animation-delay: 0.2s;}
+                            &.cir3{animation-delay: 0.3s;}
+                        }
+                    }
+                }
+            }            
+        }
+    }
+    .aside{width: 235px;position: absolute;top: 68px;left: 0;bottom: 0;background: #f2f2f2;border-right: 1px solid #d1d0d0    ;
+        .lottery-nav{width: 80px;background: #fff;position: absolute;top: 0;bottom: 0;left: 0;padding-top: 15px;
+            li{font-size: 14px;color: #666;text-align: center;padding: 5px 0;
+                &>a{text-decoration: none;display: block;}
+                .lot-img-wrap{margin-bottom: 5px;height: 68px;position: relative;
+                    [class^='cir']{
+                        width: 62px;height: 62px;position: absolute;border-radius: 50%;display: none;
+                        &.cir1{top: 0;left: 50%;margin-left: -31px;}
+                        &.cir2{bottom: 0;left: 50%;margin-left: -34px;}
+                        &.cir3{bottom: 0;left: 50%;margin-left: -28px;}
+                        &.ssc{background: rgba(255,54,23,0.25);}
+                        &.pk10{background: rgba(164,25,246,0.25);}
+                        &.k3{background: rgba(26,148,255,0.25);}
+                        &.lhc{background: rgba(8,222,181,0.25);}
+                        &.pl3{background: rgba(231,60,110,0.25);}
+                        &.fc3d{background: rgba(111,85,243,0.25);}
+                        &.kl8{background: rgba(49,211,76,0.25);}
+                        &.xy28{background: rgba(251,163,2,0.25);}
+                    }
+                    img{vertical-align: top;margin-top:9px;position: relative;z-index: 2;width: 54px;height: 54px;}
+                }
+                &.active{
+                    [class^='cir']{display: block;}
+                }
+                &:hover{
+                    [class^='cir']{animation: blink 0.4s linear infinite alternate; display: block;}          
+                    &.cir1{animation-delay: 0s;}
+                    &.cir2{animation-delay: 0.2s;}
+                    &.cir3{animation-delay: 0.3s;}
+                }
+            }
+        }
+        .arrow-lef{background: url('/src/assets/cssImages/arrow-cur-lotto.png');width: 10px;height: 18px;position: absolute;left: 85px;z-index: 3;}
+        .icon-close{display: none;
+            i{transition: all 0.3s;}
+        }
+        .lottery-link-wrap{position: absolute;width: 140px;top: 0;right: 0;bottom: 0;text-align: center;padding: 14px 10px;
+            ul{display: none;
+                &.active{display: block;}
+            }
+            li{height: 40px;line-height: 40px;margin-bottom: 15px;font-size: 16px;color: #666;border-radius: 20px;
+                &:hover{
+                    background: #e2e2e2;
+                }
+                a{text-decoration: none;display: block;}
+                &.cur{
+                    color: #fff;background:linear-gradient(to left,#f64c01,#fc901c);    box-shadow: 0 5px 5px rgba(247,83,4,0.2);
+                }
+            }
+        }
+    }
+    .content{position: absolute;top: 68px;left: 235px;background: #eee url('/src/assets/cssImages/lottery/content-top-bg.png') center top repeat-x;right: 0;bottom: 0;}
+}
+@keyframes blink{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+// 下拉框字体颜色
+.el-select-dropdown__item.selected{color: #fa6200;}
+
+// 媒体查询修改导航菜单和侧边栏的展示
+@media (max-width:1024px) {
+    // 导航展开图标
+    .mene-action-bar{display: block;position: absolute;left: 236px;
+        top: 24px;
+        .bar{width: 32px;height: 3px;background: #fff;transition: all 0.3s;
+            &+.bar{margin-top: 7px;}
+        }
+        &.active{
+            .bar{transform-origin: 50%;
+                &:first-child{transform: rotate(45deg) translateX(7px);}
+                &:first-child+.bar{transform: rotate(-45deg) translateX(6px);}
+                &:first-child+.bar+.bar{display: none;}
+            }
+        }
+    }
+    // navbar导航菜单
+    .lottery-main .header .cont .navbar{
+        display: none;position: fixed;
+        left: 0;
+        right: 0;
+        top: 68px;
+        background: rgba(248, 104, 12,0.96);
+        li{float: none;width: 100%;
+            &.cur{background: #f89c14;}
+        }
+        &.active{
+            display: block;
+        }
+    }
+    .lottery-main .aside{
+        width: 80px;
+    }
+    .lottery-main .aside .lottery-link-wrap{
+        display: none;
+        position: fixed;
+        left: 80px;
+        top: 68px;
+        bottom: 0;
+        width: 155px;
+        z-index: 3;
+        background: #f2f2f2;
+    }
+    .lottery-main .content{left: 80px;}
+    .lottery-main .aside .arrow-lef{display: none;z-index: 4;}
+    .lottery-main .aside .icon-close{position: fixed;
+        top: 68px;
+        left: 235px;
+        z-index: 4;
+        width: 40px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        font-size: 24px;
+        background: #f2f2f2;
+        &:hover{
+            i{transform: rotateZ(45deg);}
+        }
+    }
+}

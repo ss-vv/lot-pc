@@ -1,0 +1,30 @@
+// download-page
+.download-page{
+  padding: 24px;overflow: hidden;min-width: 1588px;
+  &>.wrapper{box-shadow: 5px 5px 3px rgba(0,0,0,0.13);border-radius: 8px;width: 1540px;height: 646px;padding: 32px 40px;background:#fff url("/src/assets/cssImages/download-bg.png") no-repeat 1052px 30px;}
+  .tit{font-size: 54px;color: #fa6200;}
+  .subtit{font-size: 18px;color: #666;}
+  .d-cont{
+    .code-are{height: 436px;border-right: 1px solid #e2e2e2;padding: 83px 48px;    width: 540px;
+      .line1{overflow: hidden;
+        .icon-ios{background: url("/src/assets/cssImages/download-icon-ios.png");width: 102px;height: 102px;}
+        .icon-android{background: url("/src/assets/cssImages/download-icon-android.png");width: 102px;height: 102px;}
+        .txt{margin-left: 20px;padding-top: 20px;
+          .txt1{font-size: 20px;color: #333;}
+          .txt2{font-size: 14px;color: #666;}
+        }
+        &+.line1{margin-top: 66px;}
+        .qrcode{
+          img{width: 110px;height: 110px;}
+        }
+      }
+    }
+    .down-desc{width: 466px;padding-left: 65px;padding-top: 43px;
+      .txt-item{
+        &+.txt-item{margin-top: 56px;}
+        .txt-item-tit{font-size: 28px;color: #333;}
+        .txt-item-cont{font-size: 14px;color: #666;}
+      }
+    }
+  }
+}
